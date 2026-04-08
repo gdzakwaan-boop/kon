@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warkop Aten</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #d3602a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .cart {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    #product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .product {
+      background-color: rgb(200, 193, 187);
+      border: 10px solid #97643f;
+      border-radius: 30px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(221, 216, 216, 0.1);
+    }
+
+    .product img {
+      width: 65%;
+      border-radius: 8px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+    }
+
+    button {
+      background-color: #d86324;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #756565;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+    }
+
+     /* Tombol Instagram */
+#ig-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 230px;  /* Jika ada tombol WhatsApp, geser ke kiri atau atas, misalnya right: 100px */
+  background-color: #E4405F;  /* Warna merah muda Instagram */
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;  /* Untuk link */
+}
+
+#ig-btn:hover {
+  background-color: #d32f4a;
+}
+
+
+    /* Tombol WhatsApp */
+    #wa-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #wa-btn:hover {
+      background-color: #1ebe5b;
+    }
+  </style>
+</head>
+<body>
+
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Kopi</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #4e342e, #3e2723);
+    }
+
+    .logo {
+      position: fixed;
+      top: 13px;
+      left: 30px;
+      z-index: 10;
+    }
+
+    .logo img {
+      height: 120px;
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="logo">
+    <img src="https://instagram.fcgk43-1.fna.fbcdn.net/v/t1.15752-9/575788558_1861790481353511_259159161089293321_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=j9mY4Sk4LLkQ7kNvwFnOBOQ&_nc_oc=Adlwy-paQjCb6IZ7nVv-H0KyVEWPBbF6E7nGWyN_jyg4N7rhxf666StgjrVKp-GVxoA&_nc_zt=23&_nc_ht=instagram.fcgk43-1.fna&oh=03_Q7cD3wFAZi-iGeUjAJ5hla-YRrhB9fl4ObBYUqKLgzB3R8DIBA&oe=693A2ECD" alt="Logo Toko Kopi">
+  </div>
+
+</body>
+</html>
+
+
+<div class="coffee-beans">
+  <span>☕</span><span>☕</span><span>☕</span><span>☕</span><span>☕</span>
+</div>
+
+<style>
+body {
+  background: radial-gradient(circle at top, #5d4037, #3e2723);
+  overflow: hidden;
+  margin: 0;
+}
+
+.coffee-beans span {
+  position: fixed;
+  top: -10%;
+  font-size: 3em;
+  animation: fall 5s linear infinite;
+}
+
+.coffee-beans span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.coffee-beans span:nth-child(2) { left: 30%; animation-delay: 2s; }
+.coffee-beans span:nth-child(3) { left: 50%; animation-delay: 4s; }
+.coffee-beans span:nth-child(4) { left: 70%; animation-delay: 1s; }
+.coffee-beans span:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+@keyframes fall {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+</style>
+
+
+  <header>
+    <h1>Warung Kopi Aten</h1>
+    <div class="cart">
+      🛒 Keranjang: <span id="cart-count">0</span> item — Total: Rp <span id="cart-total">0</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="product-list"></section>
+  </main>
+
+  <footer>
+    <p>© 2025 Warkop Aten — Semua hak cipta dilindungi</p>
+  </footer>
+
+  <!-- Tombol WhatsApp -->
+  <button id="wa-btn">💬 Chat via WhatsApp</button>
+
+   <!-- Tombol Instagram -->
+  <a href="https://www.instagram.com/warkop.aten/" target="_blank" id="ig-btn">📸 Follow di Instagram</a>
+
+  <script>
+    const products = [
+      { id: 1, name: "Latten", price: 12000, img: "https://scontent.fcgk43-1.fna.fbcdn.net/v/t1.15752-9/575497528_1202176345213509_8394605317294828902_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=0axPHJVpmqIQ7kNvwFQThH5&_nc_oc=AdnS0L1gqdQ1-5eibVZxokUiI5VAydmiY-X7orJyaOAJyi-CP7OGkTpf4TUxab9wLeU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcgk43-1.fna&oh=03_Q7cD3wFXIgVDhVicQ4nuoT0B6URa0qOaXJrOrRMTKxwsgySs5A&oe=693A47A1" },
+      { id: 2, name: "Ice Blackthor", price: 15000, img: "https://scontent.fcgk43-1.fna.fbcdn.net/v/t1.15752-9/555814393_2335619763518923_514849917769711471_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=CaMGNeA_kdYQ7kNvwH3EzHF&_nc_oc=Adk7vcO0wIbiRVLom1Q6ikQapqNjFaMEb4VhuQqyH1AtZRz02OA5l-ehF46sancIIoI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcgk43-1.fna&oh=03_Q7cD3wH2-5PaWcYkRFwl4eQrQgpQh7u4SGBLVXyqx4zYpbpGZg&oe=693A283C" },
+      { id: 3, name: "Susu Coklat", price: 8000, img: "https://scontent.fcgk43-1.fna.fbcdn.net/v/t1.15752-9/558099335_1939964893597536_8464669987113291530_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Qxljk865wkMQ7kNvwGztrrl&_nc_oc=AdlTttYwicKNFf4D0fOC2uDI_FKyA3KSFXcfI3dpStieo7V0R3QpbwkqV4DS3R5Cptg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcgk43-1.fna&oh=03_Q7cD3wHC4bdCYAV9FuR05dJtbttwWoq1YJtyrfOgfxDABAipXA&oe=693A1C2C" }
+    ];
+
+    let cartCount = 0;
+    let cartTotal = 0;
+
+    const list = document.getElementById("product-list");
+    const cartCountEl = document.getElementById("cart-count");
+    const cartTotalEl = document.getElementById("cart-total");
+
+    // tampilkan produk
+    products.forEach(product => {
+      const item = document.createElement("div");
+      item.classList.add("product");
+      item.innerHTML = `
+        <img src="${product.img}" alt="${product.name}">
+        <h3>${product.name}</h3>
+        <p>Rp ${product.price.toLocaleString()}</p>
+        <button onclick="addToCart(${product.price}, '${product.name}')">Tambah ke Keranjang</button>
+      `;
+      list.appendChild(item);
+    });
+
+    let cartItems = [];
+
+    // fungsi tambah ke keranjang
+    function addToCart(price, name) {
+      cartCount++;
+      cartTotal += price;
+      cartItems.push(name);
+      cartCountEl.textContent = cartCount;
+      cartTotalEl.textContent = cartTotal.toLocaleString();
+    }
+
+    // Tombol WhatsApp
+    const waBtn = document.getElementById("wa-btn");
+    const waNumber = "6285218443717"; // 🔹 Ganti dengan nomor WhatsApp kamu (gunakan format internasional tanpa +)
+
+
+    waBtn.addEventListener("click", () => {
+      const message = `Halo, saya ingin pesan:
+${cartItems.map((item, i) => `${1+1}. ${item}`).join("\n")}
+Total: Rp ${cartTotal.toLocaleString()}
+
+Terima kasih 🙏`;
+
+      const encodedMsg = encodeURIComponent(message);
+      window.open(`https://wa.me/${waNumber}?text=${encodedMsg}`, "_blank");
+    });
+  </script>
+
+</body>
+</html>
